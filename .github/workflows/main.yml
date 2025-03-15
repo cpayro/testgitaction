@@ -28,6 +28,7 @@ jobs:
     - name: path
       run: |
         pwd
+        ls -lrast
         #python3 write.py
     - name: cleanup
       run: rm -rf ~/.ssh

@@ -23,7 +23,8 @@ jobs:
       run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && exit "
 
     - name: run1
-      run: echo "The value of MY_SECRET is: ${{ secrets.WORK_DIR }}"
+      run: |
+       echo "The value of MY_SECRET is: ${{ secrets.WORK_DIR }}"
     - name: run2
       run: cd ${{ secrets.WORK_DIR }} && python3 write.py
     - name: cleanup

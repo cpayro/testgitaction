@@ -29,6 +29,8 @@ jobs:
       run: |
         pwd
         ls -lrast
+        cd testgitaction
+        ls -lrast
         #python3 write.py
     - name: cleanup
       run: rm -rf ~/.ssh

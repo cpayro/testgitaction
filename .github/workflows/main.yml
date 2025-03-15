@@ -24,4 +24,4 @@ jobs:
     - name: cleanup
       run: rm -rf ~/.ssh
     - name: run
-      run: python3 write.py
+      script: python3 write.py

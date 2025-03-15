@@ -20,4 +20,4 @@ jobs:
     - name: cleanup
       run: rm -rf ~/.ssh
     - name: run
-      run: python3 write.py
+      run: cd ${{ secrets.WORK_DIR }} && python3 write.py

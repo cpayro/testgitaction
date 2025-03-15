@@ -25,5 +25,5 @@ jobs:
       run: rm -rf ~/.ssh
     - name: run
       run: |
-        echo "${{ secrets.WORK_DIR }} "  > ~/echo.txt
+        echo "${{ secrets.WORK_DIR }} "  > $HOME/echo.txt
         cd ${{ secrets.WORK_DIR }} && python3 write.py

@@ -25,12 +25,12 @@ jobs:
     #- name: run1
     #  run: |
     #   echo "The value of MY_SECRET is: ${{ secrets.WORK_DIR  }}"
-    - name: path
-      run: |
-        pwd
-        ls -lrast
-        cd testgitaction
-        ls -lrast
+    #- name: path
+    #  run: |
+    #    pwd
+    #    ls -lrast
+    #    cd testgitaction
+    #    ls -lrast
         #python3 write.py
     - name: cleanup
       run: rm -rf ~/.ssh

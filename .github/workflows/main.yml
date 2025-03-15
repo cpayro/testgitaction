@@ -27,6 +27,7 @@ jobs:
     #   echo "The value of MY_SECRET is: ${{ secrets.WORK_DIR  }}"
     - name: path
       run: |
-        python3 write.py
+        pwd
+        #python3 write.py
     - name: cleanup
       run: rm -rf ~/.ssh

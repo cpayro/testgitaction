@@ -25,6 +25,6 @@ jobs:
     - name: run1
       run:  echo "${{ secrets.WORK_DIR }} "  > $HOME/echo.txt
     - name: run2
-        cd ${{ secrets.WORK_DIR }} && python3 write.py
+      run: cd ${{ secrets.WORK_DIR }} && python3 write.py
     - name: cleanup
       run: rm -rf ~/.ssh

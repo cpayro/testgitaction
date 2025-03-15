@@ -21,16 +21,6 @@ jobs:
           python-version: '3.9' 
     - name: connect and pull
       run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && python3 write.py "
-
-    #- name: run1
-    #  run: |
-    #   echo "The value of MY_SECRET is: ${{ secrets.WORK_DIR  }}"
-    #- name: path
-    #  run: |
-    #    pwd
-    #    ls -lrast
-    #    cd testgitaction
-    #    ls -lrast
-        #python3 write.py
+ 
     - name: cleanup
       run: rm -rf ~/.ssh

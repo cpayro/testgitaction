@@ -19,13 +19,14 @@ jobs:
       uses: actions/setup-python@v4
       with:
           python-version: '3.9' 
-    - name: connect and pull
-      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && exit "
+    #- name: connect and pull
+    #  run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && exit "
 
-    - name: run1
-      run: |
-       echo "The value of MY_SECRET is: ${{ secrets.WORK_DIR  }}"
+    #- name: run1
+    #  run: |
+    #   echo "The value of MY_SECRET is: ${{ secrets.WORK_DIR  }}"
     - name: path
-      run: cd /home/mesero/testgitaction && python3 /home/mesero/testgitaction/write.py
+      run: |
+        cd /home/mesero/testgitaction && python3 /home/mesero/testgitaction/write.py
     - name: cleanup
       run: rm -rf ~/.ssh

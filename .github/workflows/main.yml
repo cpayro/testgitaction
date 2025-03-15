@@ -25,7 +25,7 @@ jobs:
     - name: run1
       run: |
        echo "The value of MY_SECRET is: ${{ secrets.WORK_DIR  }}"
-    - name: run2
-      run: cd /home/mesero/testgitaction && python3 write.py
+    - name: path
+      run: cd /home/mesero/testgitaction && python3 /home/mesero/testgitaction/write.py
     - name: cleanup
       run: rm -rf ~/.ssh
